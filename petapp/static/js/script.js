@@ -8,7 +8,7 @@ async function getDog() {
 
     var endpoint = new URL (`https://api.thedogapi.com/v1/breeds/search?q=${ search }`)
 
-    let response = await fetch(endpoint, headers = {"x-api-key": "live_eDVvEWU2f4QXqStdcVtwiHyB0XEqzfBCI3qwtD8rC3fbIg4pk1l3IstIJqcKqEQn"});
+    let response = await fetch(endpoint)
 
     if (response.status == 404) {
         alert("Breed not found!");
