@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make A New Friend!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <h2 id="title">The Best Pets</h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Breeds</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 center">
+                        <li class="nav-item">
+                            <button><img class="icon" src="\static\img\emoji.png" alt="Favorite Pets"></button>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-collapse azure-border" id="navbarSupportedContent" style="background-color: #C4DFE6;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="container">
+            <a class="nav-link" href="#">HOW DOES IT WORK?</a>
+            <a class="nav-link" href="#">DOG CARE</a>
+            <a class="nav-link" href="#">CAT CARE</a>
+            <a class="nav-link" href="#">REPTILE CARE</a>
+            <a class="nav-link" href="#">SMALL ANIMAL CARE</a>
+            <a class="nav-link" href="#">NEED HELPING PICKING?</a>
+            <a class="nav-link" href="#">MORE RESOURCES</a>
+        </div>
+    </nav>
+    <div id="banner">
+        <div class="container banner">
+            <div class="search-div">
+                <input id="search-input" class="form-control search-input" type="search" placeholder="Search" aria-label="Search" name="search">
+                <button class="btn btn-outline-success search-btn" type="submit" onclick="getDog()">Search</button>
+            </div>
+            <h3 class="center-text">What Pet Would You Like To Learn About?</h3>
+            <h5 class="center-text">Big Or Small? We Are Sure To Have Helpful Information For You!</h5>
+            <div class="row pet-row">
+                <div class="col">
+                    <button class="pet-btn"><img class="md-icon" src="\static\img\dog.png" alt="Dog Icon">Dogs</button>
+                </div>
+                <div class="col">
+                    <button class="pet-btn"><img class="md-icon" src="\static\img\cat.png" alt="Cat Icon">Cats</button>
+                </div>
+                <div class="col">
+                    <button class="pet-btn"><img class="md-icon" src="\static\img\iguana.png" alt="Iguana Icon">Reptiles</button>
+                </div>
+                <div class="col">
+                    <button class="pet-btn"><img class="md-icon" src="\static\img\guinea-pig.png" alt="Guinea Pig Icon">Small Pets</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="azure-div" class="azure-border"></div>
+    <div class="container">
+        <div class="row">
+            <h2 id="pom"><u>Pet Of The Month Club</u></h2>
+            <div class="col">
+                <img class="pet-card" src="\static\img\pexels-melissa-jansen-van-rensburg-1954515.jpg" alt="melissa jansen van rensburg dog picture">
+                <h5 class="pom-name">Boris</h5>
+            </div>
+            <div class="col">
+                <img class="pet-card"src="\static\img\pexels-monique-laats-736532.jpg" alt="Monique Cat Photo">
+                <h5 class="pom-name">Bella</h5>
+            </div>
+            <div class="col">
+                <img class="pet-card"src="\static\img\pexels-jeet-bisht-2677026.jpg" alt="Jeet Reptile">
+                <h5 class="pom-name">Sheen</h5>
+            </div>
+            <div class="col">
+                <img class="pet-card"src="\static\img\pexels-pixabay-326012.jpg" alt="Pixabay Rabbit">
+                <h5 class="pom-name">Tinkerbell</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="input-group" style="background-color: #C4DFE6;">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04">
+                <label class="custom-file-label" for="inputGroupFile04">Add A Photo Of Your Pet For A Chance To Be Pet Of The Month</label>
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="center-text">Our Mission</h3>
+                <p class="mission">"     Here at the best pets our goal is to provide you with links to helpful information all in one place. We can help you find a pet based
+                    on which your family needs, have a question regarding care we have that linksfor that as well. Even if you just want to look at cute pictures
+                    or interesting facts about pets, your more than welcome to do so. We even make use of Pet Finders API to help you adopt pets in need in your local 
+                    The Best Pets Website is also a great place to connect with fellow pet lovers to share photos or have a fun discussion about your furry (or scaly) friends.</p>
+            </div>
+            <div class="col">
+                <h3><u>Featured Pet Clip</u></h3>
+                <video width="495" height="263" controls >
+                    <source src="\static\video\final_6340cc39dfb66100c9a75eac_700756.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="azure-border"  style="background-color: #C4DFE6;">
+        <div class="container" id="foot-cat">
+            <h5>Contact Us</h5>
+            <h5 style="padding-left: 5%;">Help Animals in need</h5>
+            <h5 style="padding-right: 20%;">Contributions</h5>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col foot">
+                <a href="">Email</a>
+                <a href="">Phone</a>
+                <a href="">Chat</a>
+            </div>
+            <div class="col foot">
+                <a href="">Donation X Company</a>
+                <a href="">Donate to us</a>
+                <a href="">Volunteer Opportunities</a>
+            </div>
+            <div class="col foot">
+                <a href="">Donations made to Best Pets</a>
+                <a href="">Resourse used to build Best Pets</a>
+                <a href="">PetFinder.com</a>
+                <a href="">Pet Finder API</a>
+            </div>
+        </div>
+        <footer>@2022 thebestpets All resource belong to whomever contributed <a href="">Contributions</a> <a href="">LinkedIn</a><a href="">Github</a></footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
