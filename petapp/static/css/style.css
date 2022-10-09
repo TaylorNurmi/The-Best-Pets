@@ -16,13 +16,13 @@ body, .btn, .nav-link, .navbar-brand, .pet-btn {
     padding: 30px 0;
     margin: -10px 0;
 }
-.center-text, #pom {
+.center-text, #pom, .givemesomespacebro, footer {
     margin-top: 50px;
 }
 .center-text, #pom, .pom-name {
     text-align: center;
 }
-.center, .input-group {
+.center, .input-group, .combine {
     align-items: center;
 }
 .pet-row, .input-group, .search-div {
@@ -34,7 +34,7 @@ body, .btn, .nav-link, .navbar-brand, .pet-btn {
 #foot-cat {
     justify-content: space-between;
 }
-#pom {
+#pom, .givemesomespacebro {
     margin-bottom: 50px;
 }
 .pet-btn, .center-text {
@@ -54,7 +54,7 @@ body, .btn, .nav-link, .navbar-brand, .pet-btn {
 .icon {
     width: 30px;
 }
-.md-icon {
+.md-icon, .breedimg {
     width: 80px;
 }
 button {
@@ -70,7 +70,7 @@ button {
 .search-btn {
     background-color: #C4DFE6;
 }
-.pet-btn, video {
+.pet-btn, video, .combine, .btn-upload {
     border-radius: 10px;
 }
 .pet-card {
@@ -82,10 +82,16 @@ button {
     flex-direction: column;
     align-items: center;
     border: 1px solid #3E363F;
+}
+.btn-upload, .pet-btn {
     padding: 10px;
 }
-.pet-row, .pet-btn, .center, .search-div, .foot, .input-group, #foot-cat {
+.pet-row, .pet-btn, .center, .search-div, .foot, .input-group, #foot-cat, .combine {
     display: flex;
+}
+.dogbreed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .pet-row {
     width: 75%;
@@ -107,23 +113,51 @@ button:hover {
 .banner {
     padding-left: 15%;
 }
+.custom-file-label {
+    padding: 0 45px;
+    font-weight: bold
+}
 .mission {
     width: 80%;
 }
-.foot {
+.foot, .combine {
     flex-direction: column;
 }
-.pom-name {
-    background-color: azure;
+.pom-name, .mission {
     border-radius: 0 0 10px 10px;
 }
-.pom-name, .input-group {
+.bg-azure, .pom-name {
+    background-color: azure;
+}
+.pom-name, .input-group, #foot-cat {
     padding: 5px 0;
 }
 .input-group, .azure-border {
     border-top: 2px solid azure;
     border-bottom:2px solid azure ;
 }
+.full-az-border {
+    border: 1px solid azure;
+}
 video {
-    border: 2px solid azure;
+    border: 2px solid #C4DFE6;
+}
+.combine {
+    padding-top: 3%;
+}
+#center-h3 {
+    padding-bottom: 5%;
+}
+.mission {
+    padding: 50px 10px;
+    margin-top: -10px;
+}
+#mission-hd {
+    border-radius: 10px 10px 0 0;
+    width: 80%;
+    padding-top: 10px;
+    margin-top: -38px;
+}
+.btn-upload {
+    background-color: #8FBCB8;
 }

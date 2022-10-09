@@ -1,11 +1,9 @@
 from django.shortcuts import render, HttpResponse, redirect
 def index(request):
-    context = {
-    	"name": "Noelle",
-    	"favorite_color": "turquoise",
-    	"pets": ["Bruce", "Fitz", "Georgie"]
-    }
-    return render(request, "index.html", context)
+    return render(request, "index.html")
+
+def dogbreeds(request):
+    return render(request, "dogbreeds.html")
 
 def form(request):
     return render(request,"form.html")

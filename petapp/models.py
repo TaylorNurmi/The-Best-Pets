@@ -37,3 +37,4 @@ class Blog(models.Model):
         if not EMAIL_REGEX.match(postData['email']):    # test whether a field matches the pattern            
             errors['email'] = "Invalid email address!"
         return errors
+
